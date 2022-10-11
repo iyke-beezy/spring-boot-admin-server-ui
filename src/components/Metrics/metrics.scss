@@ -1,0 +1,63 @@
+.instance__metrics {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    background-color: white;
+    overflow-x: hidden;
+
+    .metric,
+    .metric__tags,
+    .metric__btn {
+        display: flex;
+    }
+
+    .metric__tags {
+        margin-top: 2rem;
+        margin-left: 5rem;
+        align-items: center;
+
+        div {
+            margin-left: 1.5rem;
+        }
+
+        .tags__data {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            justify-content: flex-start;
+            text-align: left;
+            align-items: center;
+
+            div {
+                margin-bottom: 0.2rem;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .metric__btn {
+        justify-content: flex-end;
+    }
+}
+
+.metric {
+    width: 100%;
+    margin: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+
+    .metric__table {
+        padding: 1rem;
+        margin: 1rem;
+        width: 100%;
+        text-align: left;
+
+        // theadtr{
+        //     display: flex;
+        //     justify-content: space-between;
+        //     align-items: flex-start;
+        // }
+    }
+}

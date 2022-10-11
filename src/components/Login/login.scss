@@ -1,0 +1,16 @@
+.loginForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+    .form {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 2rem;
+
+        h2 {
+            text-align: center;
+        }
+    }
+}

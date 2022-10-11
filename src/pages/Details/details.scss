@@ -1,0 +1,229 @@
+// details.jsx
+.instance_details {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+
+    // header
+    .details__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+
+        .header__info {
+            display: flex;
+            flex-direction: column;
+
+            margin: 1rem 0;
+            padding: 0.5rem;
+
+            .header__title {
+                text-transform: lowercase;
+                font-weight: 800;
+            }
+
+            span:last-child {
+                font-size: 1rem;
+                margin-top: 0.5rem;
+                color: var(--gray-color);
+            }
+        }
+
+        .header__links {
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+
+            .link__item {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: center;
+                border: 0.2px solid rgba($color: #000000, $alpha: 0.3);
+                padding: 0rem 0.5rem;
+                margin-right: 0.1rem;
+                border-radius: 1px;
+                font-size: 0.75rem;
+                cursor: pointer;
+
+                span {
+                    font-size: 1rem;
+                    margin-right: 0.25rem;
+                }
+            }
+        }
+    }
+
+    // details info
+    .details__info {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100%;
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            margin: 2rem 0;
+        }
+
+        .col-1 {
+            flex: 0.5;
+            margin-right: 1rem;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .instance__info {
+                margin-bottom: 1rem;
+            }
+            .ant-card {
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            }
+        }
+        .col-2 {
+            flex: 0.5;
+
+            .ant-table-thead > tr > th,
+            .ant-table-tbody > tr > td,
+            .ant-table tfoot > tr > th,
+            .ant-table tfoot > tr > td {
+                padding: 0.5rem !important;
+            }
+
+            .ant-card-head {
+                font-weight: 700 !important;
+                max-height: 50px !important;
+
+                .ant-card-extra {
+                    font-weight: 700 !important;
+                    .svg {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .ant-card-head-title {
+        text-align: left;
+    }
+    .ant-table-thead > tr > th,
+    .ant-table-tbody > tr > td,
+    .ant-table tfoot > tr > th,
+    .ant-table tfoot > tr > td {
+        padding: 0.5rem !important;
+    }
+
+    .ant-card-head {
+        font-weight: 700 !important;
+        max-height: 50px !important;
+
+        .ant-card-extra {
+            font-weight: 700 !important;
+            .svg {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    p.status {
+        color: green;
+    }
+}
+
+// details-process.jsx
+
+.process {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+
+    .process__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .item__head {
+            font-size: 1rem;
+        }
+    }
+}
+
+// details-threads.jsx
+
+.threads-chart {
+    width: 100%;
+    &__svg {
+        height: 159px;
+        width: 100%;
+    }
+
+    &__area {
+        &--live {
+            fill: hsl(44deg, 100%, 77%);
+            opacity: 0.8;
+        }
+    }
+}
+.threadData {
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .data_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0.2rem 0;
+    }
+}
+
+path.threads-chart__area--daemon {
+    fill: hsl(207deg, 61%, 53%);
+    opacity: 0.8;
+}
+
+// details-memory.jsx
+.mem-chart {
+    &__svg {
+        height: 159px;
+        width: 100%;
+    }
+
+    &__area {
+        &--committed {
+            fill: hsl(44,  100%, 77%);
+            opacity: 0.8;
+        }
+        &--used {
+            fill: hsl(207, 61%,  53%);
+            opacity: 0.8;
+        }
+        &--metaspace {
+            fill: hsl(171, 100%, 41%);
+            opacity: 0.8;
+        }
+    }
+
+    &__line--max {
+        stroke: hsl(0, 0%, 48%);
+    }
+}

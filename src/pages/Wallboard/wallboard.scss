@@ -1,0 +1,12 @@
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+
+    font-size: calc(10px + 2vmin);
+    color: black;
+    background-color: hsl(0deg, 0%, 29%);
+}
