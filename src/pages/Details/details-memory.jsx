@@ -225,10 +225,13 @@ const MemoryChart = ({ type, instanceId }) => {
 			});
 	};
 
-	const subscription = useMemo(() => createSubscription(), [instanceId]);
+
 	useEffect(() => {
-		// console.log(data);
-	}, [data]);
+		let subscription = createSubscription();
+		return () => {
+			subscription.unsubscribe();
+		}
+	}, []);
 	return (
 		loaded && (
 			<Card title={`Memory: ${type}`}>
