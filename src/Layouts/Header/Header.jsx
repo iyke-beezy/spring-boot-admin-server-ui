@@ -8,7 +8,7 @@ const items = [
 	{
 		key: 1,
 		label: "Wallboard",
-		location: "/wallboard",
+		location: "/",
 	},
 	{
 		key: 2,

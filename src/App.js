@@ -6,6 +6,8 @@ import "./App.css";
 import { Dashboard, Login } from "./components";
 import Wallboard from "./pages/Wallboard/wallboard";
 import useToken from "./components/useToken";
+import { Layout } from "antd";
+import AppHeader from "./Layouts/Header/Header";
 
 function App() {
 	const { token, setToken } = useToken();
@@ -17,10 +19,18 @@ function App() {
 		<div className="App">
 			<BrowserRouter>
 				<Routes>
-					<Route path="/" element={<Wallboard />} />
-					<Route path="/wallboard" element={<Wallboard />} />
-					<Route path="instance/*" element={<Dashboard />} >
-					</Route>
+					<Route
+						path="/"
+						element={
+							<Layout style={{}}>
+								<AppHeader />
+								<Routes>
+									<Route index element={<Wallboard />} />
+								</Routes>
+							</Layout>
+						}
+					/>
+					<Route path="instance/*" element={<Dashboard />}></Route>
 				</Routes>
 			</BrowserRouter>
 		</div>

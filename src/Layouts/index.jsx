@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout } from "antd";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 import AppHeader from "./Header/Header";
 import SideBar from "./Sidebar/sidebar";
 import "./layout.scss";
@@ -11,8 +11,8 @@ const AppLayout = ({ children }) => {
 	const onClick = (e) => {
 		const { item } = e;
 		const { link } = item.props;
-		
-		// navigate(link)
+		// console.log(link);
+		navigate(link)
 	};
 	return (
 		<>
